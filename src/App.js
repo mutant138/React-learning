@@ -1,100 +1,108 @@
-import Expenses from "./components/Expenses"
+import Expenses from "./components/Expenses/Expenses";
+import React from "react";
 
-
-function App() {
+const App=()=> {
   const expenses = [
     {
       id: 1,
-      title:'Car Insurance',
+      title: "Car Insurance",
       amount: 250,
-      date: new Date(2023,2,15),
-      location: 'Hometown'
+      date: new Date(2023, 2, 15),
+      location: "Hometown",
     },
     {
       id: 2,
-      title:'Car',
+      title: "Car",
       amount: 2500,
-      date: new Date(2023,3,15),
-      location: 'Hometown'
+      date: new Date(2023, 3, 15),
+      location: "Hometown",
     },
     {
       id: 3,
-      title:'Grocery',
+      title: "Grocery",
       amount: 2500,
-      date: new Date(2023,5,15),
-      location: 'Bangalore'
+      date: new Date(2023, 5, 15),
+      location: "Bangalore",
     },
     {
       id: 4,
-      title:'Bills',
+      title: "Bills",
       amount: 5000,
-      date: new Date(2023,2,18),
-      location: 'Bangalore'
+      date: new Date(2023, 2, 18),
+      location: "Bangalore",
     },
     {
       id: 5,
-      title: 'Vacation',
+      title: "Vacation",
       amount: 3000,
       date: new Date(2023, 7, 10),
-      location: 'Beach Resort',
+      location: "Beach Resort",
     },
     {
       id: 6,
-      title: 'Electronics',
+      title: "Electronics",
       amount: 1500,
       date: new Date(2023, 8, 22),
-      location: 'Online Store',
+      location: "Online Store",
     },
     {
       id: 7,
-      title: 'Dinner Out',
+      title: "Dinner Out",
       amount: 100,
       date: new Date(2023, 9, 5),
-      location: 'City Restaurant',
+      location: "City Restaurant",
     },
     {
       id: 8,
-      title: 'Home Decor',
+      title: "Home Decor",
       amount: 800,
       date: new Date(2023, 10, 15),
-      location: 'Local Store',
+      location: "Local Store",
     },
     {
       id: 9,
-      title: 'Fitness Membership',
+      title: "Fitness Membership",
       amount: 200,
       date: new Date(2023, 11, 2),
-      location: 'Gym',
+      location: "Gym",
     },
     {
       id: 10,
-      title: 'Books',
+      title: "Books",
       amount: 50,
       date: new Date(2024, 1, 8),
-      location: 'Bookstore',
+      location: "Bookstore",
     },
     {
       id: 11,
-      title: 'Medical Checkup',
+      title: "Medical Checkup",
       amount: 120,
       date: new Date(2024, 2, 12),
-      location: 'Health Center',
+      location: "Health Center",
     },
     {
       id: 12,
-      title: 'Tech Gadgets',
+      title: "Tech Gadgets",
       amount: 500,
       date: new Date(2024, 4, 20),
-      location: 'Electronics Store',
+      location: "Electronics Store",
     },
     {
       id: 13,
-      title: 'Online Courses',
+      title: "Online Courses",
       amount: 300,
       date: new Date(2024, 6, 7),
-      location: 'E-learning Platform',
+      location: "E-learning Platform",
     },
-  ]
+  ];
+
+  // return React.createElement(
+  //   "div",
+  //   {},
+  //   React.createElement("h2", {}, "Learning React from Open source..!"),
+  //   React.createElement(Expenses, { items: expenses })
+  // );
+
   return (
     <div>
       <h2>Learning React from Open source..!</h2>
