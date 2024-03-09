@@ -5,9 +5,22 @@ const ExpenseForm = ()=>{
     const [enteredTitle , setEnteredTitle] = useState("")
     const [enteredAmount , setEnteredAmount] = useState("")
     const [enteredDate , setEnteredDate] = useState("")
+
+    // const [userInput , setUserInput] = useState({
+    //     enteredTitle: '',
+    //     enteredAmount: '',
+    //     enteredDate: ''
+    // })
     
     const titleChangeHandler = (event)=>{
         setEnteredTitle(event.target.value)
+        // setUserInput({
+        //     ...userInput,
+        //     enteredTitle: event.target.value,
+        // })
+        // setUserInput((previousState)=>{
+        //     return {...previousState,enteredTitle: event.target.value,}
+        // })
     }
     const amountChangeHandler = (event)=>{
         setEnteredAmount(event.target.value)
@@ -15,8 +28,18 @@ const ExpenseForm = ()=>{
     const dateChangeHandler = (event)=>{
         setEnteredDate(event.target.value)
     }
+    const onSubmitHandler = (event)=>{
+        event.preventDefault()
+        console.log(event)
+        const expenseData = {
+            title: enteredTitle,
+            amount: enteredAmount,
+            date: new Date(enteredDate)
+        }
+        console.log(expenseData)
+    }
     return (
-        <form>
+        <form  onSubmit={onSubmitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control" >
                     <label>Title</label>
@@ -24,7 +47,7 @@ const ExpenseForm = ()=>{
                 </div>
                 <div className="new-expense__control" >
                     <label>Amount</label>
-                    <input type="number" onChange={amountChangeHandler} min="0.01" steps="0.01" />
+                    <input type="number" onChange={amountChangeHandler}/>
                 </div>
                 <div className="new-expense__control" >
                     <label>Date</label>
